@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "slug": "/",
+    "title": "Inteligência em saúde. Eficiência na gestão. Excelência no cuidado."
+  },
+  {
+    "id": 2,
+    "slug": "/quem-somos/",
+    "title": "quem somos"
+  },
+  {
+    "id": 3,
+    "slug": "/solucoes/",
+    "title": "Soluções especializadas para uma gestão de saúde mais eficiente."
+  },
+  {
+    "id": 4,
+    "slug": "/solucoes/auditoria-concorrente/",
+    "title": "Acompanhamento próximo para decisões assistenciais mais eficientes."
+  },
+  {
+    "id": 5,
+    "slug": "/solucoes/auditoria-contas-hospitalares/",
+    "title": "Critério técnico, transparência e segurança na análise de contas."
+  },
+  {
+    "id": 6,
+    "slug": "/solucoes/auditoria-regulacao/",
+    "title": "Regulação com agilidade, critério técnico e foco no paciente."
+  },
+  {
+    "id": 7,
+    "slug": "/solucoes/auditoria-home-care/",
+    "title": "Qualidade assistencial e transparência no cuidado domiciliar."
+  },
+  {
+    "id": 8,
+    "slug": "/solucoes/auditoria-oncologia/",
+    "title": "Análise especializada para decisões responsáveis em oncologia."
+  },
+  {
+    "id": 9,
+    "slug": "/solucoes/entrevista-qualificada/",
+    "title": "Informação técnica para uma gestão mais segura e responsável."
+  },
+  {
+    "id": 10,
+    "slug": "/solucoes/auditoria-credenciamento/",
+    "title": "Mais segurança técnica na formação e qualificação da rede prestadora."
+  },
+  {
+    "id": 11,
+    "slug": "/solucoes/auditoria-unimed-intercambio/",
+    "title": "Conhecimento especializado para a auditoria no Sistema Unimed Intercâmbio."
+  },
+  {
+    "id": 12,
+    "slug": "/gestao-publica/",
+    "title": "Mais eficiência na gestão hospitalar. Mais capacidade de cuidar."
+  },
+  {
+    "id": 13,
+    "slug": "/gestao-publica/gestao-de-leitos/",
+    "title": "O leito certo, para o paciente certo, pelo tempo necessário."
+  },
+  {
+    "id": 14,
+    "slug": "/gestao-publica/desospitalizacao/",
+    "title": "O cuidado pode continuar além do leito hospitalar."
+  },
+  {
+    "id": 15,
+    "slug": "/tecnologia-e-indicadores/",
+    "title": "Informação confiável para decisões mais inteligentes em saúde."
+  },
+  {
+    "id": 16,
+    "slug": "/clientes/",
+    "title": "Confiança construída com trabalho e compromisso técnico."
+  },
+  {
+    "id": 17,
+    "slug": "/contato/",
+    "title": "Vamos conversar sobre os desafios da sua instituição?"
+  },
+  {
+    "id": 18,
+    "slug": "/trabalhe-conosco/",
+    "title": "Pessoas comprometidas fazem a diferença no cuidado e na gestão."
+  },
+  {
+    "id": 19,
+    "slug": "/politica-de-privacidade/",
+    "title": "Política de Privacidade"
+  }
+]

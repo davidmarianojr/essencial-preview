@@ -1,0 +1,33 @@
+{
+  "source": "logo-essencial.png",
+  "source_library_file_id": "libfile_abcfb8720764819194f32d9be392a71d",
+  "original_size": [
+    1920,
+    1080
+  ],
+  "alpha_bounds": [
+    334,
+    392,
+    1537,
+    657
+  ],
+  "vector_size": [
+    1203,
+    265
+  ],
+  "method": "VTracer per original RGB, alpha threshold 128, spline curves",
+  "colors": [
+    "#31d8bf",
+    "#273b7c",
+    "#1e3168",
+    "#868685"
+  ],
+  "variants": [
+    "full colour",
+    "white",
+    "navy",
+    "reduced without tagline",
+    "symbol"
+  ],
+  "embedded_bitmaps": false
+}

@@ -57,6 +57,28 @@
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  // Platform screens on Tecnologia e Indicadores (Genilton, 17/10): accessible tabs. Without
+  // JavaScript the panels are simply stacked.
+  document.querySelectorAll('[data-pf]').forEach(box => {
+    const tabs = [...box.querySelectorAll('[role="tab"]')];
+    const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
+    const select = (index, focus) => {
+      tabs.forEach((tab, i) => { const on = i === index; tab.setAttribute('aria-selected', String(on)); tab.tabIndex = on ? 0 : -1; panels[i].hidden = !on; });
+      if (focus) tabs[index].focus();
+    };
+    box.classList.add('is-tabs');
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(i, false));
+      tab.addEventListener('keydown', event => {
+        const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[event.key];
+        if (next === undefined) return;
+        event.preventDefault();
+        select((next + tabs.length) % tabs.length, true);
+      });
+    });
+    select(Math.max(0, tabs.findIndex(tab => tab.getAttribute('aria-selected') === 'true')), false);
+  });
+
   // Round 17o: the clients rail loops on its own (CSS) and can also be dragged with a finger
   // or the mouse. While dragging, the CSS animation is replaced by a manual offset (wrapped,
   // so the loop never ends); on release the animation resumes from that exact point via a

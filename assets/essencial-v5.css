@@ -461,6 +461,25 @@ main:focus{outline:none}
 .stat p{margin:10px 0 0;font-size:14px;line-height:1.45;color:var(--text)}
 .about-copy h2{margin-bottom:24px}
 
+/* Platform showcase (Tecnologia e Indicadores): real portal screens as tabs ---- */
+.platform{background:linear-gradient(180deg,#fff 0%,var(--ice) 100%)}
+.platform .section-head{max-width:720px}
+.pf-tabs{display:none}
+.pf.is-tabs .pf-tabs{display:inline-flex;flex-wrap:wrap;gap:4px;margin:0 0 clamp(8px,2vw,16px);padding:5px;border:1px solid var(--line);border-radius:999px;background:#fff;box-shadow:var(--shadow-sm)}
+.pf-tab{min-height:44px;padding:0 20px;border:0;border-radius:999px;background:transparent;font:inherit;font-size:14px;font-weight:700;color:var(--navy);cursor:pointer;transition:background-color .2s,color .2s}
+.pf-tab:hover{background:var(--mint-50);color:var(--green-700)}
+.pf-tab[aria-selected=true]{background:var(--navy);color:#fff}
+.pf-tab:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.pf-panel{display:grid;justify-items:center}
+.pf-panel+.pf-panel{margin-top:24px}
+.pf.is-tabs .pf-panel+.pf-panel{margin-top:0}
+.pf-panel[hidden]{display:none}
+.pf-panel img{width:min(100%,860px);height:auto;margin:0 0 12px}
+.pf-caption{max-width:720px;margin:0;text-align:center;font-size:15px;line-height:1.6;color:var(--text)}
+.pf-caption strong{color:var(--navy)}
+@media(prefers-reduced-motion:no-preference){.pf.is-tabs .pf-panel:not([hidden]) img{animation:ess-fade .5s ease both}}
+@media(max-width:760px){.pf.is-tabs .pf-tabs{display:grid;grid-template-columns:repeat(3,1fr);width:100%;border-radius:18px}.pf-tab{padding:6px 8px;border-radius:14px;font-size:13px;line-height:1.2}.pf-panel img{margin:0 0 8px}}
+
 /* Two fronts; the section's own photograph is integrated behind the heading --- */
 .fronts{overflow:hidden;background:linear-gradient(180deg,var(--mint-50) 0%,var(--ice) 100%)}
 .fronts-photo{width:min(42%,600px)}

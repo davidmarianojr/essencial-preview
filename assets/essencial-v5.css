@@ -1391,6 +1391,38 @@ a.service-row:hover .service-emblem{background:var(--cobalt);color:#fff}
   .button,.navigation-v5 .portal-link,.hx-controls{border:1px solid ButtonText}
 }
 
+/* Responsive photographs: <picture class="pic"> must not add a box around the <img>. */
+.pic{display:contents}
+
+/* FAQ (SEO/GEO, 17/10): questions answered with the approved copy; native <details>. ---------- */
+.faq{background:linear-gradient(180deg,#fff 0%,var(--ice) 100%)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.faq-head{position:sticky;top:calc(var(--header-space) + 24px)}
+.faq-head h2{margin-bottom:16px}
+.faq-head p{max-width:420px;margin:0 0 22px;font-size:17px;line-height:1.65}
+.faq-list{display:grid;gap:10px}
+.faq-item{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow-sm);transition:border-color .25s,box-shadow .25s}
+.faq-item[open]{border-color:#bfe9dd;box-shadow:var(--shadow)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:16px 20px;list-style:none;cursor:pointer;font-size:17px;font-weight:700;line-height:1.35;color:var(--navy)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:18px}
+.faq-icon{position:relative;flex:none;width:28px;height:28px;border-radius:50%;background:var(--mint-50)}
+.faq-icon::before,.faq-icon::after{content:'';position:absolute;left:50%;top:50%;width:12px;height:2px;border-radius:2px;background:var(--green);transform:translate(-50%,-50%);transition:transform .3s var(--ease)}
+.faq-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-item[open] .faq-icon::after{transform:translate(-50%,-50%) rotate(0deg)}
+.faq-answer{padding:0 20px 18px}
+.faq-answer p{max-width:640px;margin:0;font-size:16px;line-height:1.65}
+@media(prefers-reduced-motion:no-preference){.faq-item[open] .faq-answer{animation:ess-rise .35s var(--ease) both}}
+@media(max-width:900px){.faq-grid{grid-template-columns:minmax(0,1fr);gap:28px}.faq-head{position:static}}
+@media(max-width:600px){.faq-item summary{min-height:52px;padding:14px 16px;font-size:16px}.faq-answer{padding:0 16px 16px}.faq-answer p{font-size:15px}}
+
+/* 404 */
+.nf{min-height:72vh;display:grid;align-items:center;padding-top:calc(var(--header-space) + 48px);background:radial-gradient(60% 60% at 85% 20%,rgb(49 216 191 / .14),transparent 70%),linear-gradient(180deg,var(--ice),#fff)}
+.nf-inner{max-width:720px}
+.nf h1{margin-bottom:16px;color:var(--navy)}
+.nf p{margin:0 0 28px;font-size:18px;line-height:1.6}
+.nf-links{display:flex;flex-wrap:wrap;gap:12px}
+
 /* Mobile QA pass (David, 17/10): every page reviewed at 360/375/430 px. --------------------- */
 .wa-fab{transition:transform .25s var(--ease),box-shadow .25s,opacity .3s,visibility .3s}
 @media(max-width:760px){

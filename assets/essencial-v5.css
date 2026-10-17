@@ -493,7 +493,6 @@ main:focus{outline:none}
 .ab-value-grid>.reveal:nth-child(2){--rd:.08s}
 .ab-value-grid>.reveal:nth-child(3){--rd:.16s}
 .ab-value-grid>.reveal:nth-child(4){--rd:.24s}
-.leaders{background:#fff}
 @media(prefers-reduced-motion:no-preference){
   .js-anim .ab-audience.reveal.is-inview li{animation:ess-rise .55s calc(.15s + var(--i) * .07s) var(--ease) backwards}
   .js-anim .ab-values.is-inview .ab-value-ico{animation:hx-pop .55s .35s var(--ease-back) backwards}
@@ -519,18 +518,31 @@ main:focus{outline:none}
 }
 
 /* A Essencial: partners, cut-out portraits in identical studio frames (17/10) ------------ */
-.leaders{background:linear-gradient(180deg,#fff 0%,var(--ice) 100%)}
-.lead-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,36px);margin:0;padding:0;list-style:none}
+/* Leadership as its own dark section (David, 17/10): centred heading; on hover each portrait
+   grows from its base and the head leaves the frame through the top (the cut is clipped only
+   at the sides and bottom), with a soft shadow, for a 3D pop-out. */
+.ab-values{padding-bottom:clamp(56px,6vw,88px)}
+.leaders{overflow:hidden;color:var(--on-dark);background:radial-gradient(50% 60% at 50% 0%,rgb(49 216 191 / .16),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgb(40 88 235 / .22),transparent 70%),linear-gradient(170deg,var(--navy-900) 0%,var(--navy-950) 100%)}
+.leaders .section-head{max-width:760px;margin-inline:auto;margin-bottom:clamp(56px,7vw,88px);text-align:center}
+.leaders .section-head p{margin-inline:auto;color:var(--on-dark)}
+.leaders .eyebrow{--accent:var(--teal)}
+.leaders h2{color:#fff}
+.lead-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,36px);max-width:1080px;margin:0 auto;padding:0;list-style:none}
 .lead-card{text-align:center}
-.lead-photo{position:relative;aspect-ratio:1/1.1;margin:0 0 20px;overflow:hidden;border-radius:var(--radius-lg);background:radial-gradient(60% 46% at 50% 30%,#fff 0%,rgb(255 255 255 / 0) 100%),radial-gradient(70% 40% at 50% 100%,rgb(49 216 191 / .22),transparent 70%),linear-gradient(180deg,#eef5f8 0%,#dce8ef 100%);box-shadow:var(--shadow-sm);isolation:isolate}
-.lead-photo::before{content:'';position:absolute;z-index:-1;left:50%;top:6%;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgb(49 216 191 / .16),transparent 68%);transform:translateX(-50%)}
-.lead-photo img{position:absolute;left:var(--l);top:var(--t);width:var(--w);max-width:none;height:auto;transition:transform .6s var(--ease);transform-origin:50% 20%}
-.lead-card:hover .lead-photo img{transform:scale(1.03)}
-.lead-card h3{margin:0 0 4px;font-size:21px;line-height:1.3;color:var(--navy)}
-.lead-card p{margin:0;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+.lead-photo{position:relative;aspect-ratio:1/1.1;margin:0 0 22px;border-radius:var(--radius-lg);background:radial-gradient(60% 46% at 50% 30%,#fff 0%,rgb(255 255 255 / 0) 100%),radial-gradient(70% 40% at 50% 100%,rgb(49 216 191 / .24),transparent 70%),linear-gradient(180deg,#eef5f8 0%,#d6e3ec 100%);box-shadow:0 30px 60px -30px rgb(2 6 18 / .7);isolation:isolate;transition:box-shadow .5s var(--ease)}
+.lead-photo::before{content:'';position:absolute;z-index:-1;left:50%;top:6%;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgb(49 216 191 / .18),transparent 68%);transform:translateX(-50%)}
+.lead-cut{position:absolute;inset:0;clip-path:inset(-40% 0 0 0 round 0 0 var(--radius-lg) var(--radius-lg))}
+.lead-person{position:absolute;inset:0;transform-origin:50% 100%;transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .7s var(--ease)}
+.lead-person img{position:absolute;left:var(--l);top:var(--t);width:var(--w);max-width:none;height:auto}
+.lead-card h3{margin:0 0 6px;font-size:21px;line-height:1.3;color:#fff}
+.lead-card p{margin:0;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
 .lead-grid>.reveal:nth-child(2){--rd:.1s}
 .lead-grid>.reveal:nth-child(3){--rd:.2s}
-@media(max-width:760px){.lead-grid{grid-template-columns:1fr;gap:14px}.lead-card{display:grid;grid-template-columns:112px 1fr;grid-template-rows:1fr 1fr;column-gap:18px;text-align:left}.lead-photo{grid-row:span 2;margin:0;border-radius:18px}.lead-card h3{align-self:end}.lead-card p{align-self:start}.lead-card h3{font-size:19px}.lead-card p{font-size:12px}}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .lead-card:hover .lead-person{transform:translateY(-7%) scale(1.13);filter:drop-shadow(0 22px 22px rgb(2 6 18 / .35))}
+  .lead-card:hover .lead-photo{box-shadow:0 40px 70px -28px rgb(2 6 18 / .8)}
+}
+@media(max-width:760px){.lead-grid{grid-template-columns:1fr;gap:14px}.lead-card{display:grid;grid-template-columns:112px 1fr;grid-template-rows:1fr 1fr;column-gap:18px;text-align:left}.lead-photo{grid-row:span 2;margin:0;border-radius:18px}.lead-cut{clip-path:inset(0 round 18px)}.lead-card h3{align-self:end}.lead-card p{align-self:start}.lead-card h3{font-size:19px}.lead-card p{font-size:12px}.leaders .section-head{text-align:left;margin-bottom:36px}.leaders .section-head p{margin-inline:0}}
 
 /* Tecnologia e Indicadores (David, 17/10): indicators grid + dark Portal section ---------- */
 .ti{padding:clamp(64px,8vw,112px) 0}

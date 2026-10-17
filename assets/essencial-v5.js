@@ -57,6 +57,28 @@
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  // Contato: "Como chegar / compartilhar" menu (a <details>, usable without JavaScript). Adds
+  // the share item: native share sheet where available, otherwise copies the address. Closes
+  // on Escape and on outside click.
+  document.querySelectorAll('[data-directions]').forEach(menu => {
+    const item = menu.querySelector('[data-share-item]');
+    const button = menu.querySelector('[data-share-address]');
+    const label = button && button.querySelector('span');
+    if (item && button && (navigator.share || navigator.clipboard)) {
+      if (!navigator.share) label.textContent = 'Copiar endereço';
+      item.hidden = false;
+      button.addEventListener('click', async () => {
+        const { shareTitle: title, shareText: text, shareUrl: url } = button.dataset;
+        try {
+          if (navigator.share) await navigator.share({ title, text: `${title}\n${text}`, url });
+          else { await navigator.clipboard.writeText(`${text}\n${url}`); label.textContent = 'Endereço copiado'; setTimeout(() => { label.textContent = 'Copiar endereço'; }, 2200); }
+        } catch (error) { /* share sheet dismissed */ }
+      });
+    }
+    document.addEventListener('click', event => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+    menu.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
+  });
+
   // Portal screens on Tecnologia e Indicadores (David, 17/10): tabs that switch like the home
   // hero — the leaving screen sinks under the stage line, the next one rises with a turn of the
   // brand glass (no pointer parallax: the notebook stays still and the turn always completes). Autoplay only while the section is on screen; only the Pause button stops it

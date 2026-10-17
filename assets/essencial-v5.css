@@ -632,6 +632,25 @@ main:focus{outline:none}
   .cl-grid li{border-radius:18px}
 }
 
+/* Entrevista Qualificada · Previsa Saúde (17/10) */
+.sv-card-logo{flex:none;width:auto;height:26px}
+.sv-card-head-logo{flex-wrap:wrap;row-gap:10px}
+.sv-card-head-logo .sv-card-title{flex-basis:100%;order:3;font-size:17px}
+.sv-card-head-logo .sv-badge{margin-left:auto}
+.pv-group{padding:clamp(56px,7vw,96px) 0}
+.pv-group-inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);align-items:center;padding:clamp(28px,4vw,56px);border:1px solid var(--line);border-radius:var(--radius-xl);background:radial-gradient(60% 80% at 0% 0%,rgb(49 216 191 / .14),transparent 70%),#fff;box-shadow:var(--shadow)}
+.pv-logos{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;padding:clamp(22px,3vw,34px);border-radius:var(--radius-lg);background:var(--ice)}
+.pv-logo{display:grid;place-items:center;min-height:96px;padding:16px;border-radius:18px;background:#fff;box-shadow:var(--shadow-sm)}
+.pv-logo img{width:100%;max-width:180px;height:auto}
+.pv-plus{font-size:26px;font-weight:300;color:var(--muted)}
+.pv-group-label{grid-column:1/-1;justify-self:center;margin-top:6px;padding:6px 14px;border-radius:999px;background:var(--navy);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.pv-group-copy h2{margin-bottom:14px}
+.pv-group-copy p{max-width:520px;margin:0 0 24px;font-size:17px;line-height:1.65}
+.pv-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.pv-actions .button svg{width:18px;height:18px}
+@media(max-width:900px){.pv-group-inner{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.pv-logo{min-height:72px;padding:12px}.pv-group-copy p{font-size:16px}.pv-group-label{font-size:10.5px;letter-spacing:.06em;white-space:nowrap}}
+
 /* A Essencial (David, 17/10): story + facts, audience chips, values ----------------------- */
 .ab-story{padding-bottom:clamp(56px,7vw,96px)}
 .ab-story-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,6vw,96px);align-items:center}

@@ -539,7 +539,9 @@ main:focus{outline:none}
 .lead-grid>.reveal:nth-child(2){--rd:.1s}
 .lead-grid>.reveal:nth-child(3){--rd:.2s}
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
-  .lead-card:hover .lead-person{transform:translateY(-7%) scale(1.13);filter:drop-shadow(0 22px 22px rgb(2 6 18 / .35))}
+  /* Scale only, from the frame's bottom edge: every photo already reaches past that edge at
+     rest, so its cut never lifts into view (a translate exposed the backdrop under Diogo). */
+  .lead-card:hover .lead-person{transform:scale(1.2);filter:drop-shadow(0 22px 22px rgb(2 6 18 / .35))}
   .lead-card:hover .lead-photo{box-shadow:0 40px 70px -28px rgb(2 6 18 / .8)}
 }
 @media(max-width:760px){.lead-grid{grid-template-columns:1fr;gap:14px}.lead-card{display:grid;grid-template-columns:112px 1fr;grid-template-rows:1fr 1fr;column-gap:18px;text-align:left}.lead-photo{grid-row:span 2;margin:0;border-radius:18px}.lead-cut{clip-path:inset(0 round 18px)}.lead-card h3{align-self:end}.lead-card p{align-self:start}.lead-card h3{font-size:19px}.lead-card p{font-size:12px}.leaders .section-head{text-align:left;margin-bottom:36px}.leaders .section-head p{margin-inline:0}}

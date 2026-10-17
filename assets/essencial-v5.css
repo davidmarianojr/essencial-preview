@@ -507,7 +507,7 @@ main:focus{outline:none}
 .tp-pause[hidden]{display:none}
 .tp-pause-ico{width:12px;height:12px;background:linear-gradient(90deg,currentColor 0 4px,transparent 4px 8px,currentColor 8px)}
 .tp-pause.is-paused .tp-pause-ico{background:currentColor;clip-path:polygon(0 0,100% 50%,0 100%)}
-.tp-glass{position:absolute;z-index:-1;left:50%;top:46%;width:min(84%,600px);height:auto;transform:translate(-50%,-50%);rotate:var(--tp-r,0deg);transition:rotate 1.4s cubic-bezier(.65,0,.35,1)}
+.tp-glass{position:absolute;z-index:-1;left:50%;top:46%;width:min(84%,600px);height:auto;translate:-50% -50%;rotate:var(--tp-r,0deg);transform-origin:50% 50%;transition:rotate 1.4s cubic-bezier(.65,0,.35,1)}
 /* Notebook built in CSS around the real screens: dark bezel, camera, aluminium base with the
    opening notch and a real (dark) contact shadow on the navy background. */
 .tp-device{position:relative;width:86%;margin:0 auto}

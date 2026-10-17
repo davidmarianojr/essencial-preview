@@ -132,6 +132,20 @@ else warm();
 syncPause();
 schedule();
 });
+document.querySelectorAll('[data-map-src]').forEach(box => {
+const load = () => {
+if (box.querySelector('iframe')) return;
+const frame = document.createElement('iframe');
+frame.title = box.dataset.mapTitle;
+frame.referrerPolicy = 'strict-origin-when-cross-origin';
+frame.allowFullscreen = true;
+frame.src = box.dataset.mapSrc;
+box.appendChild(frame);
+};
+if (!('IntersectionObserver' in window)) { load(); return; }
+const watch = new IntersectionObserver(entries => { if (entries.some(entry => entry.isIntersecting)) { watch.disconnect(); load(); } }, { rootMargin: '600px 0px' });
+watch.observe(box);
+});
 const rail = document.querySelector('.trust-rail');
 const track = rail?.querySelector('.trust-track');
 if (rail && track && !stillCapture && !reduced.matches) {

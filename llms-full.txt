@@ -517,7 +517,7 @@ Se você entrar em contato por e-mail, telefone ou WhatsApp, as informações qu
 
 ## Serviços externos
 
-A página de Contato exibe um mapa do Google Maps, carregado diretamente dos servidores do Google. Ao abrir essa página, o Google pode registrar dados da visita e usar cookies próprios, conforme a política de privacidade do Google.
+A página de Contato exibe um mapa do Google Maps, carregado diretamente dos servidores do Google quando chega à tela. A partir daí, o Google pode registrar dados da visita e usar cookies próprios, conforme a política de privacidade do Google.
 
 Os links para outros sites e aplicativos, como WhatsApp, Instagram, LinkedIn, Google Maps, Waze, Apple Maps e Previsa Saúde, levam a serviços com regras de privacidade próprias. O Portal do Cliente é um sistema separado, de acesso exclusivo para clientes.
 

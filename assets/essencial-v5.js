@@ -57,6 +57,16 @@
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  // Mobile QA (17/10): on the home page the WhatsApp button waits until the visitor has
+  // scrolled past most of the hero, so it never covers the hero call to action on phones.
+  if (document.body.classList.contains('home-page')) {
+    const body = document.body;
+    const update = () => { body.classList.toggle('fab-ready', window.scrollY > window.innerHeight * 0.55); };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+  }
+
   // Contato: "Como chegar / compartilhar" menu (a <details>, usable without JavaScript). Adds
   // the share item: native share sheet where available, otherwise copies the address. Closes
   // on Escape and on outside click.
@@ -222,6 +232,9 @@
         if (t < 1) requestAnimationFrame(step);
       };
       requestAnimationFrame(step);
+      // Mobile QA (17/10): the final figure is guaranteed even when frames are throttled
+      // (background tab, battery saver), so 12 / 20+ never stays at an intermediate value.
+      setTimeout(() => { item.node.nodeValue = `${item.end}${item.suffix}`; }, duration + 250);
     });
   }
   const enter = el => { if (el.classList.contains('is-inview')) return; el.classList.add('is-inview'); if (el.classList.contains('anim-sec')) count(el); };

@@ -367,7 +367,7 @@ main:focus{outline:none}
 }
 /* Round 17n: phones show every card too, smaller and placed around the subject (never over
    face, hands or the login screen). */
-@media(max-width:600px){.home-page .wa-fab{bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}.wa-fab{width:52px;height:52px}.hx-chip{font-size:9px;padding:.6em 1em .6em .6em;gap:.6em}.hx-chip-b{right:62%;left:auto;top:6%}.hx-panel{font-size:8px}.hx-panel-chart{left:70%;right:auto;top:34%}.hx-panel-audit{right:70%;left:auto;top:58%}.hx-chip-portal{right:auto;left:max(6px,calc(50% - 178px));top:6%;bottom:auto}.hx-play-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}.hx-play{padding:0;width:44px}}
+@media(max-width:600px){.wa-fab{width:52px;height:52px}.hx-chip{font-size:9px;padding:.6em 1em .6em .6em;gap:.6em}.hx-chip-b{right:62%;left:auto;top:6%}.hx-panel{font-size:8px}.hx-panel-chart{left:70%;right:auto;top:34%}.hx-panel-audit{right:70%;left:auto;top:58%}.hx-chip-portal{right:auto;left:max(6px,calc(50% - 178px));top:6%;bottom:auto}.hx-play-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}.hx-play{padding:0;width:44px}}
 /* Accessibility fallback: only when the content cannot fit (extreme zoom or very short
    viewport) the hero returns to normal flow. JS adds .hx-flow after measuring. */
 .hx.hx-flow{position:relative;height:auto;min-height:0}
@@ -519,7 +519,7 @@ main:focus{outline:none}
 .sv-exchange i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;box-shadow:var(--shadow)}
 .sv-exchange svg{width:22px;height:22px}
 .sv-network{display:grid;justify-items:center}
-.sv-node{display:flex;align-items:center;gap:10px;min-width:0;overflow-wrap:anywhere;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:var(--ice);font-size:13.5px;font-weight:700;color:var(--navy)}
+.sv-node{display:flex;align-items:center;gap:10px;min-width:0;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:var(--ice);font-size:13.5px;font-weight:700;color:var(--navy)}
 .sv-node i{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--mint-100);color:var(--green)}
 .sv-node-center{background:var(--navy);border-color:var(--navy);color:#fff}
 .sv-node-center i{background:rgb(255 255 255 / .14);color:#fff}
@@ -1389,4 +1389,46 @@ a.service-row:hover .service-emblem{background:var(--cobalt);color:#fff}
 @media(forced-colors:active){
   .brand-glass{forced-color-adjust:none}
   .button,.navigation-v5 .portal-link,.hx-controls{border:1px solid ButtonText}
+}
+
+/* Mobile QA pass (David, 17/10): every page reviewed at 360/375/430 px. --------------------- */
+.wa-fab{transition:transform .25s var(--ease),box-shadow .25s,opacity .3s,visibility .3s}
+@media(max-width:760px){
+  /* Hidden from the first paint (no flash); essencial-v5.js adds .fab-ready past the hero. */
+  .home-page:not(.fab-ready) .wa-fab{opacity:0;visibility:hidden;transform:translateY(12px) scale(.85);pointer-events:none;transition:none}
+}
+@media(max-width:600px){
+  /* Labels at 12 px minimum; tap targets at 44 px. */
+  .hx-eyebrow{font-size:12px;letter-spacing:.08em}
+  .front-tag{font-size:12px}
+  .services .service-number{font-size:12px}
+  .services .service-row-partner .partner-actions a{min-height:44px}
+  .service-row-partner h3 a{display:inline-flex;align-items:center;min-height:44px}
+  /* Home: no forced line break in the stats card; tighter gap before Tecnologia. */
+  .about-stats .stat p br{display:none}
+  .section.information{padding-top:24px}
+  /* Natural reading sizes for long opening paragraphs. */
+  .ph-lead{font-size:16px;line-height:1.6}
+  .sv-intro-copy .sv-lead{font-size:17px}
+  /* Closing contact band: smaller heading. */
+  .contact-inner h2{font-size:26px;line-height:1.2}
+  /* Footer: the two link columns side by side. */
+  .footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+  .footer-columns>div:nth-child(n+3){grid-column:1/-1}
+  /* Solutions: other solutions as a compact two-column grid. */
+  .sv-more-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .sv-more-grid a{flex-direction:column;align-items:flex-start;gap:10px;min-height:0;padding:14px;font-size:14px;line-height:1.3}
+  .sv-more-grid a>svg{display:none}
+  /* Desospitalização network: nodes stacked (icon above label), words never split. */
+  .sv-node{flex-direction:column;justify-content:center;gap:6px;padding:10px 6px;text-align:center;font-size:12.5px;line-height:1.25;hyphens:none}
+  .sv-node-center{flex-direction:row;padding:8px 14px}
+  /* Alternatives / definition cards: compact rows. */
+  .sv-defs{gap:10px}
+  .sv-defs li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;padding:16px}
+  .sv-def-ico{grid-row:span 2;width:44px;height:44px;margin:0;border-radius:13px}
+  .sv-def-ico svg{width:22px;height:22px}
+  .sv-defs h3{margin-bottom:4px;font-size:17px}
+  .sv-defs p{font-size:14.5px}
+  /* Gestão Pública related cards: no fixed height. */
+  .sv-related-grid a{min-height:0;gap:18px}
 }

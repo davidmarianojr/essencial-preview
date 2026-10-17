@@ -186,7 +186,7 @@
   sections.forEach(el => el.classList.add('anim-sec'));
   const targets = [...blocks, ...sections];
   // Count-up for the 12 / 20+ facts (visual only; the final text is already in the HTML).
-  const counters = [...document.querySelectorAll('.about-stats .stat strong')].map(el => {
+  const counters = [...document.querySelectorAll('.about-stats .stat strong, [data-count]')].map(el => {
     const node = el.firstChild;
     const match = node && node.nodeType === 3 ? node.nodeValue.match(/^(\d+)(\D*)$/) : null;
     return match ? { node, end: Number(match[1]), suffix: match[2], section: el.closest('section') } : null;

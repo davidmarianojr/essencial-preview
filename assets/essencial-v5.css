@@ -523,8 +523,9 @@ main:focus{outline:none}
    at the sides and bottom), with a soft shadow, for a 3D pop-out. */
 .ab-values{padding-bottom:clamp(56px,6vw,88px)}
 .leaders{overflow:hidden;color:var(--on-dark);background:radial-gradient(50% 60% at 50% 0%,rgb(49 216 191 / .16),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgb(40 88 235 / .22),transparent 70%),linear-gradient(170deg,var(--navy-900) 0%,var(--navy-950) 100%)}
-.leaders .section-head{max-width:760px;margin-inline:auto;margin-bottom:clamp(56px,7vw,88px);text-align:center}
-.leaders .section-head p{margin-inline:auto;color:var(--on-dark)}
+.leaders{padding-top:clamp(56px,6vw,84px)}
+.leaders .section-head{max-width:1040px;margin-inline:auto;margin-bottom:clamp(52px,5.5vw,66px);text-align:center}
+.leaders .section-head p{max-width:940px;margin-inline:auto;color:var(--on-dark)}
 .leaders .eyebrow{--accent:var(--teal)}
 .leaders h2{color:#fff}
 .lead-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,36px);max-width:1080px;margin:0 auto;padding:0;list-style:none}

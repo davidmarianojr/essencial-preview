@@ -17,11 +17,11 @@ Trabalhamos com uma abordagem próxima e colaborativa, que respeita a autonomia 
 
 ## Soluções pensadas para os desafios de cada instituição.
 
-**Card 1 | Saúde Suplementar**
+**Saúde Suplementar**
 
 Auditoria e consultoria especializadas para operadoras de saúde, administradoras de benefícios, seguradoras e corretoras. Apoiamos o acompanhamento assistencial, a análise de contas, a regulação e o controle de custos com critério técnico e segurança.
 
-**Card 2 | Gestão Pública em Saúde**
+**Gestão Pública em Saúde**
 
 Uma proposta de atuação voltada à eficiência dos serviços hospitalares públicos, com auditoria concorrente, gestão ativa de leitos, análise de permanências e apoio à desospitalização segura.
 
@@ -79,7 +79,25 @@ Experiência, compromisso técnico e proximidade para apoiar instituições de s
 
 Converse com nossa equipe e descubra quais soluções da Essencial fazem sentido para os desafios da sua operação.
 
----
+## Dúvidas sobre a Essencial.
+
+**O que é a Essencial Auditoria e Consultoria em Saúde?**  
+É uma empresa capixaba, com sede em Vila Velha (ES), que há 12 anos desenvolve soluções personalizadas em auditoria médica e consultoria em saúde. A Essencial é conduzida por diretores que atuam há mais de 20 anos na área da saúde.
+
+**Onde fica a Essencial?**  
+Em Vila Velha, no Espírito Santo: R. Erothildes Penna Medina, 195, Sala 1401, Ed. Unique Business, Praia da Costa, Vila Velha – ES, CEP 29101-655.
+
+**Para quem a Essencial trabalha?**  
+Para operadoras de saúde, administradoras de benefícios, seguradoras, corretoras e instituições assistenciais. A Essencial também tem uma proposta de atuação para a gestão pública de saúde, voltada a hospitais públicos, secretarias de Saúde, fundações e organizações sociais de saúde.
+
+**Quais soluções a Essencial oferece?**  
+Auditoria concorrente, auditoria de contas hospitalares, auditoria de regulação, auditoria em home care, auditoria em oncologia, auditoria para credenciamento e auditoria Unimed Intercâmbio. A Entrevista Qualificada é realizada pela Previsa Saúde, empresa que, assim como a Essencial, integra o grupo Guardian Participações.
+
+**Quem está à frente da Essencial?**  
+Diogo Cosme, Diretor-Executivo; Leandro Braun, Diretor Operacional; e Ton Martins, Diretor de Growth Marketing.
+
+**Como falar com a Essencial?**  
+Pelo WhatsApp (27) 99521-8086, pelos telefones (27) 3207-2377 e (27) 3022-2399 ou pelo e-mail contato@essencialauditoria.com.br.
 
 ---
 
@@ -112,7 +130,11 @@ Acreditamos que a auditoria deve ir além da conferência de processos. Quando f
 
 A Essencial é conduzida por diretores que atuam há mais de 20 anos na área da saúde. Essa trajetória contribui para uma visão ampla dos desafios assistenciais, regulatórios e operacionais enfrentados pelas instituições.
 
----
+## Liderança
+
+- Diogo Cosme, Diretor-Executivo.
+- Leandro Braun, Diretor Operacional.
+- Ton Martins, Diretor de Growth Marketing.
 
 ---
 
@@ -129,7 +151,31 @@ Nosso trabalho reúne avaliação técnica, acompanhamento de processos e conhec
 
 Fale com nossos especialistas sobre o cenário da sua instituição.
 
----
+## Dúvidas sobre as soluções.
+
+**O que é auditoria concorrente?**  
+A Auditoria Concorrente da Essencial realiza o acompanhamento técnico das internações durante a prestação do cuidado, oferecendo informações relevantes para a qualidade assistencial e o controle responsável dos recursos.
+
+**O que a auditoria de contas hospitalares avalia?**  
+A Auditoria de Contas Hospitalares da Essencial reúne profissionais médicos e de enfermagem para avaliar a consistência entre registros assistenciais, procedimentos realizados, materiais utilizados e cobranças apresentadas.
+
+**Como funciona a auditoria de regulação?**  
+A Auditoria de Regulação da Essencial apoia a avaliação técnica de solicitações assistenciais, contribuindo para a identificação do cuidado adequado e para a utilização responsável dos recursos da rede. O modelo de serviço apresentado pela Essencial contempla central de regulação médica 24 horas, conforme o escopo contratado.
+
+**A Auditoria em Home Care presta atendimento domiciliar?**  
+Não. A Auditoria em Home Care da Essencial avalia a assistência prestada no ambiente domiciliar, observando a coerência entre as necessidades do paciente, os cuidados previstos e os serviços efetivamente realizados.
+
+**O que a auditoria em oncologia analisa?**  
+A Essencial oferece auditoria especializada em oncologia para analisar solicitações e contas assistenciais, considerando indicações médicas, coberturas aplicáveis, diretrizes pertinentes e condições contratuais.
+
+**Quem realiza a Entrevista Qualificada?**  
+A Previsa Saúde, empresa que, assim como a Essencial, integra o grupo Guardian Participações. O serviço é realizado por profissionais habilitados e busca esclarecer informações relevantes sobre o histórico de saúde do beneficiário, de acordo com as regras aplicáveis.
+
+**Para que serve a auditoria para credenciamento?**  
+A Auditoria para Credenciamento da Essencial oferece suporte à avaliação de hospitais, clínicas e outros prestadores, considerando critérios técnicos, estruturais e documentais relevantes para sua atuação na rede assistencial.
+
+**A Essencial atua no Sistema Unimed Intercâmbio?**  
+Sim. A Essencial oferece apoio técnico em auditoria para operações de intercâmbio, incluindo análise de contas e contestações em seus diferentes níveis, conforme as regras e condições aplicáveis.
 
 ---
 
@@ -157,8 +203,6 @@ Maior visibilidade sobre as internações, apoio ao controle de custos e informa
 
 ---
 
----
-
 # Auditoria de Contas Hospitalares | Essencial
 URL: https://essencialauditoria.com.br/solucoes/auditoria-contas-hospitalares/
 
@@ -175,8 +219,6 @@ Nosso objetivo é apoiar a conformidade técnica das contas, esclarecer divergê
 - Conferência técnica de procedimentos, materiais e serviços.
 - Identificação e fundamentação de inconsistências.
 - Elaboração de relatórios e pareceres de auditoria.
-
----
 
 ---
 
@@ -203,8 +245,6 @@ Uma regulação bem estruturada reúne critérios consistentes, agilidade no pro
 
 ---
 
----
-
 # Auditoria em Home Care | Essencial
 URL: https://essencialauditoria.com.br/solucoes/auditoria-home-care/
 
@@ -221,8 +261,6 @@ Nossa atuação busca apoiar a continuidade segura do tratamento e oferecer info
 - Análise de planos de cuidado e sua execução.
 - Conferência retrospectiva dos registros em prontuário.
 - Verificação da adequação das cobranças aos serviços prestados.
-
----
 
 ---
 
@@ -245,8 +283,6 @@ A Essencial oferece auditoria especializada em oncologia para analisar solicita�
 
 ---
 
----
-
 # Entrevista Qualificada · Previsa Saúde | Essencial
 URL: https://essencialauditoria.com.br/solucoes/entrevista-qualificada/
 
@@ -263,8 +299,6 @@ Com critérios técnicos e respeito à confidencialidade, o serviço contribui p
 - Registro técnico de achados pertinentes.
 - Elaboração de pareceres nos limites normativos e contratuais aplicáveis.
 - Apoio ao tratamento adequado das informações, observando a LGPD e as normas do setor.
-
----
 
 ---
 
@@ -285,8 +319,6 @@ A Auditoria para Credenciamento da Essencial oferece suporte à avaliação de h
 
 ---
 
----
-
 # Auditoria Unimed Intercâmbio | Essencial
 URL: https://essencialauditoria.com.br/solucoes/auditoria-unimed-intercambio/
 
@@ -302,8 +334,6 @@ A Essencial oferece apoio técnico em auditoria para operações de intercâmbio
 - Avaliação de contestações e respectivas fundamentações.
 - Apoio às operações credora e devedora.
 - Relatórios técnicos para subsidiar a gestão.
-
----
 
 ---
 
@@ -359,8 +389,6 @@ Apresente seus desafios à nossa equipe. Podemos estruturar uma proposta técnic
 
 ---
 
----
-
 # Gestão de Leitos Hospitalares | Essencial
 URL: https://essencialauditoria.com.br/gestao-publica/gestao-de-leitos/
 
@@ -381,8 +409,6 @@ A Essencial propõe um modelo de gestão ativa da permanência hospitalar, integ
 ## Uma rotina de acompanhamento objetivo
 
 A metodologia pode incluir revisões periódicas do censo de pacientes, com identificação de impedimentos à alta, análise dos casos que demandam articulação adicional e registro da evolução das pendências.
-
----
 
 ---
 
@@ -408,8 +434,6 @@ A Essencial propõe apoiar a identificação e a articulação dessas possibilid
 ## Alta segura é uma decisão assistencial.
 
 O apoio da auditoria não substitui a avaliação dos profissionais responsáveis nem os critérios clínicos, sociais e operacionais necessários à continuidade do cuidado.
-
----
 
 ---
 
@@ -439,16 +463,12 @@ O objetivo não é apenas visualizar indicadores. É utilizá-los para apoiar a�
 
 ---
 
----
-
 # Clientes | Essencial Auditoria e Consultoria em Saúde
 URL: https://essencialauditoria.com.br/clientes/
 
 Conheça organizações do setor de saúde que fazem parte da trajetória da Essencial Auditoria e Consultoria em Saúde.
 
 As relações que desenvolvemos com instituições do setor de saúde fazem parte da trajetória da Essencial. Cada projeto reforça a importância de compreender as particularidades de nossos clientes e oferecer soluções orientadas à qualidade assistencial e à eficiência.
-
----
 
 ---
 
@@ -459,14 +479,13 @@ Fale com a Essencial em Vila Velha (ES): R. Erothildes Penna Medina, 195, Praia 
 
 A Essencial está pronta para ouvir sua necessidade e apresentar as soluções que melhor se ajustam à sua operação.
 
-Preencha o formulário ou entre em contato pelos canais abaixo. Nossa equipe comercial dará continuidade ao atendimento.
-
+**Endereço:** R. Erothildes Penna Medina, 195, Sala 1401, Ed. Unique Business, Praia da Costa, Vila Velha, ES, 29101-655 (Google Maps: https://www.google.com/maps/search/?api=1&query=Edif%C3%ADcio%20Unique%20Business%2C%20R.%20Erothildes%20Penna%20Medina%2C%20195%20-%20Praia%20da%20Costa%2C%20Vila%20Velha%20-%20ES%2C%2029101-655)  
 **Telefones:** (27) 3207-2377 | (27) 3022-2399  
+**WhatsApp:** (27) 99521-8086 (https://wa.me/5527995218086?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Essencial%20e%20gostaria%20de%20conversar.)  
 **E-mail:** contato@essencialauditoria.com.br  
-**Endereço:** Av. Princesa Isabel, 574, Centro, Vitória/ES, Bloco A, salas 501/502, CEP 29010-364  
-**Site:** essencialauditoria.com.br
-
----
+**Instagram:** https://www.instagram.com/essencialauditoria  
+**LinkedIn:** https://linkedin.com/company/essencialauditoria  
+**Portal do Cliente:** https://portal.essencialauditoria.com.br
 
 ---
 
@@ -481,13 +500,9 @@ Acreditamos no valor do conhecimento técnico, da responsabilidade e do trabalho
 
 ---
 
----
-
 # Política de Privacidade | Essencial Auditoria
 URL: https://essencialauditoria.com.br/politica-de-privacidade/
 
 Como a Essencial Auditoria e Consultoria em Saúde trata as informações recebidas pelos canais institucionais, observando a LGPD.
 
 A Essencial respeita a privacidade das pessoas que entram em contato por meio de seus canais institucionais. As informações fornecidas nos formulários do site devem ser tratadas exclusivamente para as finalidades informadas, observando a legislação aplicável, incluindo a Lei Geral de Proteção de Dados Pessoais (LGPD).
-
----

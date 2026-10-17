@@ -153,7 +153,11 @@
     pause && pause.addEventListener('click', () => { paused = !paused; syncPause(); schedule(); });
     reduced.addEventListener('change', () => { syncPause(); schedule(); });
     document.addEventListener('visibilitychange', schedule);
-    if ('IntersectionObserver' in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; schedule(); }, { threshold: 0.35 }).observe(box.querySelector('.tp-stage'));
+    // The screens load lazily (the section is below the fold); once the notebook is in view the
+    // hidden ones are fetched too, so the first automatic change never shows an empty screen.
+    const warm = () => box.querySelectorAll('.tp-panel img[loading="lazy"]').forEach(img => { img.loading = 'eager'; });
+    if ('IntersectionObserver' in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; if (visible) warm(); schedule(); }, { threshold: 0.35 }).observe(box.querySelector('.tp-stage'));
+    else warm();
     syncPause();
     schedule();
   });

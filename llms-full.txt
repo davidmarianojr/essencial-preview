@@ -505,4 +505,28 @@ URL: https://essencialauditoria.com.br/politica-de-privacidade/
 
 Como a Essencial Auditoria e Consultoria em Saúde trata as informações recebidas pelos canais institucionais, observando a LGPD.
 
-A Essencial respeita a privacidade das pessoas que entram em contato por meio de seus canais institucionais. As informações fornecidas nos formulários do site devem ser tratadas exclusivamente para as finalidades informadas, observando a legislação aplicável, incluindo a Lei Geral de Proteção de Dados Pessoais (LGPD).
+A Essencial respeita a privacidade de quem visita este site e de quem entra em contato pelos seus canais institucionais, observando a Lei Geral de Proteção de Dados Pessoais (LGPD).
+
+## O que este site coleta
+
+Este é um site institucional: não tem formulários, cadastro nem área de login. O site em si não usa cookies de rastreamento nem ferramentas de medição de audiência ou de publicidade.
+
+## Quando você fala com a Essencial
+
+Se você entrar em contato por e-mail, telefone ou WhatsApp, as informações que decidir enviar, como nome, forma de contato e mensagem, chegam diretamente à equipe da Essencial e são usadas para responder e dar continuidade ao seu atendimento. Pedimos que não sejam enviados dados de saúde de pacientes por esses canais.
+
+## Serviços externos
+
+A página de Contato exibe um mapa do Google Maps, carregado diretamente dos servidores do Google. Ao abrir essa página, o Google pode registrar dados da visita e usar cookies próprios, conforme a política de privacidade do Google.
+
+Os links para outros sites e aplicativos, como WhatsApp, Instagram, LinkedIn, Google Maps, Waze, Apple Maps e Previsa Saúde, levam a serviços com regras de privacidade próprias. O Portal do Cliente é um sistema separado, de acesso exclusivo para clientes.
+
+## Dados técnicos de acesso
+
+Como acontece na maioria dos sites, o serviço de hospedagem pode registrar dados técnicos das visitas, como endereço IP, data e hora, navegador e página acessada, para manter o site seguro e em funcionamento.
+
+## Seus direitos
+
+Você pode pedir informações sobre seus dados pessoais, bem como a correção ou a exclusão deles, pelo e-mail contato@essencialauditoria.com.br. Dúvidas sobre esta página podem ser enviadas para o mesmo endereço.
+
+Esta página resume como o site funciona hoje e será atualizada com a Política de Privacidade completa da Essencial. Última atualização: 17 de outubro de 2026.

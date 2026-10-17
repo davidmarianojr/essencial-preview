@@ -59,9 +59,9 @@
 
   // Portal screens on Tecnologia e Indicadores (David, 17/10): tabs that switch like the home
   // hero — the leaving screen sinks under the stage line, the next one rises with a turn of the
-  // brand glass. Autoplay only while the section is on screen; only the Pause button stops it
+  // brand glass (no pointer parallax: the notebook stays still and the turn always completes). Autoplay only while the section is on screen; only the Pause button stops it
   // (as on the home). Reduced motion: no autoplay and instant switches. Without JavaScript the
-  // three screens are listed with their captions.
+  // three screen descriptions stay listed beside the first screen.
   document.querySelectorAll('[data-tp]').forEach(box => {
     const tabs = [...box.querySelectorAll('[role="tab"]')];
     const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
@@ -88,11 +88,11 @@
         clearLeaving();
         panels.forEach(panel => panel.classList.remove('is-entering'));
         previous.classList.remove('is-active');
-        if (animate) { leaving = previous; previous.classList.add('is-leaving'); leaveTimer = setTimeout(clearLeaving, 800); } else previous.hidden = true;
+        if (animate) { leaving = previous; previous.classList.add('is-leaving'); previous.addEventListener('animationend', function gone(event) { if (event.target !== previous) return; previous.removeEventListener('animationend', gone); if (leaving === previous) clearLeaving(); }); leaveTimer = setTimeout(clearLeaving, 2500); } else previous.hidden = true;
         const panel = panels[next];
         panel.hidden = false;
         panel.classList.add('is-active');
-        if (animate) { panel.classList.add('is-entering'); panel.addEventListener('animationend', function done(event) { if (event.target !== panel.querySelector('img')) return; panel.classList.remove('is-entering'); panel.removeEventListener('animationend', done); }); }
+        if (animate) { panel.classList.add('is-entering'); panel.addEventListener('animationend', function done(event) { if (event.target !== panel) return; panel.classList.remove('is-entering'); panel.removeEventListener('animationend', done); }); }
         turn += next > index || (index === tabs.length - 1 && next === 0) ? 120 : -120;
         if (glass) glass.style.setProperty('--tp-r', `${turn}deg`);
         index = next;
@@ -122,20 +122,6 @@
     reduced.addEventListener('change', () => { syncPause(); schedule(); });
     document.addEventListener('visibilitychange', schedule);
     if ('IntersectionObserver' in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; schedule(); }, { threshold: 0.35 }).observe(box.querySelector('.tp-stage'));
-    // Light pointer parallax on the stage, as on the home hero photographs.
-    const stage = box.querySelector('.tp-stage');
-    if (stage && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      let frame = 0, mx = 0, my = 0;
-      const apply = () => { frame = 0; stage.style.setProperty('--mx', mx.toFixed(3)); stage.style.setProperty('--my', my.toFixed(3)); };
-      box.addEventListener('pointermove', event => {
-        if (reduced.matches) return;
-        const rect = stage.getBoundingClientRect();
-        mx = Math.max(-1, Math.min(1, (event.clientX - rect.left - rect.width / 2) / (rect.width / 2)));
-        my = Math.max(-1, Math.min(1, (event.clientY - rect.top - rect.height / 2) / (rect.height / 2)));
-        if (!frame) frame = requestAnimationFrame(apply);
-      });
-      box.addEventListener('pointerleave', () => { mx = 0; my = 0; if (!frame) frame = requestAnimationFrame(apply); });
-    }
     syncPause();
     schedule();
   });

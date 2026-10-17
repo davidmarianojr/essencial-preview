@@ -701,6 +701,11 @@ a.service-row:hover .service-emblem{background:var(--cobalt);color:#fff}
 .ph-lead{max-width:36em;margin:0;font-size:clamp(17px,1.4vw,19px);line-height:1.65;color:var(--on-dark)}
 .v5-provider-note{margin-top:28px;padding:20px 22px;border:1px solid rgb(255 255 255 / .18);border-radius:20px;background:rgb(255 255 255 / .08)}
 .v5-provider-label{display:inline-flex;margin-bottom:8px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.v5-provider-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:12px}
+.v5-provider-head .v5-provider-label{margin:0}
+.v5-provider-logo{display:inline-flex;align-items:center;padding:8px 14px;border-radius:12px;background:#fff;box-shadow:0 6px 18px -8px rgb(2 6 18 / .5)}
+.v5-provider-logo img{display:block;width:auto;height:26px}
+.aside-contact .aside-partner-logo{width:auto;height:34px;margin-bottom:22px}
 .v5-provider-note p{margin:0 0 4px;font-size:16px;line-height:1.6;color:#e3eaf6}
 .v5-provider-note .text-link{color:#fff;text-decoration-color:rgb(255 255 255 / .4)}
 .v5-provider-note .text-link:hover{color:var(--teal)}

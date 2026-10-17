@@ -57,26 +57,87 @@
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  // Platform screens on Tecnologia e Indicadores (Genilton, 17/10): accessible tabs. Without
-  // JavaScript the panels are simply stacked.
-  document.querySelectorAll('[data-pf]').forEach(box => {
+  // Portal screens on Tecnologia e Indicadores (David, 17/10): tabs that switch like the home
+  // hero — the leaving screen sinks under the stage line, the next one rises with a turn of the
+  // brand glass. Autoplay only while the section is on screen; only the Pause button stops it
+  // (as on the home). Reduced motion: no autoplay and instant switches. Without JavaScript the
+  // three screens are listed with their captions.
+  document.querySelectorAll('[data-tp]').forEach(box => {
     const tabs = [...box.querySelectorAll('[role="tab"]')];
     const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
-    const select = (index, focus) => {
-      tabs.forEach((tab, i) => { const on = i === index; tab.setAttribute('aria-selected', String(on)); tab.tabIndex = on ? 0 : -1; panels[i].hidden = !on; });
-      if (focus) tabs[index].focus();
+    const glass = box.querySelector('.tp-glass');
+    const pause = box.querySelector('.tp-pause');
+    const label = pause && pause.querySelector('.tp-pause-label');
+    const duration = 7000;
+    let index = 0, turn = 0, timer = 0, paused = false, visible = false, leaving = null, leaveTimer = 0;
+    const clearLeaving = () => { clearTimeout(leaveTimer); if (leaving) { leaving.classList.remove('is-leaving'); if (!leaving.classList.contains('is-active')) leaving.hidden = true; } leaving = null; };
+    const playing = () => visible && !paused && !reduced.matches && !document.hidden;
+    const schedule = () => {
+      clearTimeout(timer);
+      box.classList.remove('is-playing');
+      if (!playing()) return;
+      void box.offsetWidth; // restart the progress bar of the selected tab
+      box.classList.add('is-playing');
+      timer = setTimeout(() => select(index + 1, false), duration);
     };
-    box.classList.add('is-tabs');
+    const select = (next, focus) => {
+      next = (next + tabs.length) % tabs.length;
+      if (next !== index) {
+        const animate = !reduced.matches;
+        const previous = panels[index];
+        clearLeaving();
+        panels.forEach(panel => panel.classList.remove('is-entering'));
+        previous.classList.remove('is-active');
+        if (animate) { leaving = previous; previous.classList.add('is-leaving'); leaveTimer = setTimeout(clearLeaving, 800); } else previous.hidden = true;
+        const panel = panels[next];
+        panel.hidden = false;
+        panel.classList.add('is-active');
+        if (animate) { panel.classList.add('is-entering'); panel.addEventListener('animationend', function done(event) { if (event.target !== panel.querySelector('img')) return; panel.classList.remove('is-entering'); panel.removeEventListener('animationend', done); }); }
+        turn += next > index || (index === tabs.length - 1 && next === 0) ? 120 : -120;
+        if (glass) glass.style.setProperty('--tp-r', `${turn}deg`);
+        index = next;
+      }
+      tabs.forEach((tab, i) => { const on = i === index; tab.setAttribute('aria-selected', String(on)); tab.tabIndex = on ? 0 : -1; });
+      if (focus) tabs[index].focus();
+      schedule();
+    };
+    box.classList.add('is-live');
+    panels.forEach((panel, i) => { panel.hidden = i !== 0; panel.classList.toggle('is-active', i === 0); });
     tabs.forEach((tab, i) => {
       tab.addEventListener('click', () => select(i, false));
       tab.addEventListener('keydown', event => {
-        const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[event.key];
+        const next = { ArrowDown: i + 1, ArrowRight: i + 1, ArrowUp: i - 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[event.key];
         if (next === undefined) return;
         event.preventDefault();
-        select((next + tabs.length) % tabs.length, true);
+        select(next, true);
       });
     });
-    select(Math.max(0, tabs.findIndex(tab => tab.getAttribute('aria-selected') === 'true')), false);
+    const syncPause = () => {
+      if (!pause) return;
+      pause.hidden = reduced.matches;
+      pause.classList.toggle('is-paused', paused);
+      label.textContent = paused ? 'Retomar troca automática' : 'Pausar troca automática';
+    };
+    pause && pause.addEventListener('click', () => { paused = !paused; syncPause(); schedule(); });
+    reduced.addEventListener('change', () => { syncPause(); schedule(); });
+    document.addEventListener('visibilitychange', schedule);
+    if ('IntersectionObserver' in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; schedule(); }, { threshold: 0.35 }).observe(box.querySelector('.tp-stage'));
+    // Light pointer parallax on the stage, as on the home hero photographs.
+    const stage = box.querySelector('.tp-stage');
+    if (stage && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      let frame = 0, mx = 0, my = 0;
+      const apply = () => { frame = 0; stage.style.setProperty('--mx', mx.toFixed(3)); stage.style.setProperty('--my', my.toFixed(3)); };
+      box.addEventListener('pointermove', event => {
+        if (reduced.matches) return;
+        const rect = stage.getBoundingClientRect();
+        mx = Math.max(-1, Math.min(1, (event.clientX - rect.left - rect.width / 2) / (rect.width / 2)));
+        my = Math.max(-1, Math.min(1, (event.clientY - rect.top - rect.height / 2) / (rect.height / 2)));
+        if (!frame) frame = requestAnimationFrame(apply);
+      });
+      box.addEventListener('pointerleave', () => { mx = 0; my = 0; if (!frame) frame = requestAnimationFrame(apply); });
+    }
+    syncPause();
+    schedule();
   });
 
   // Round 17o: the clients rail loops on its own (CSS) and can also be dragged with a finger

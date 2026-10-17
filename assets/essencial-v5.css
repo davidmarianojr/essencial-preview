@@ -367,7 +367,7 @@ main:focus{outline:none}
 }
 /* Round 17n: phones show every card too, smaller and placed around the subject (never over
    face, hands or the login screen). */
-@media(max-width:600px){.hx-chip{font-size:9px;padding:.6em 1em .6em .6em;gap:.6em}.hx-chip-b{right:62%;left:auto;top:6%}.hx-panel{font-size:8px}.hx-panel-chart{left:70%;right:auto;top:34%}.hx-panel-audit{right:70%;left:auto;top:58%}.hx-chip-portal{right:auto;left:max(6px,calc(50% - 178px));top:6%;bottom:auto}.hx-play-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}.hx-play{padding:0;width:44px}}
+@media(max-width:600px){.home-page .wa-fab{bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}.wa-fab{width:52px;height:52px}.hx-chip{font-size:9px;padding:.6em 1em .6em .6em;gap:.6em}.hx-chip-b{right:62%;left:auto;top:6%}.hx-panel{font-size:8px}.hx-panel-chart{left:70%;right:auto;top:34%}.hx-panel-audit{right:70%;left:auto;top:58%}.hx-chip-portal{right:auto;left:max(6px,calc(50% - 178px));top:6%;bottom:auto}.hx-play-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}.hx-play{padding:0;width:44px}}
 /* Accessibility fallback: only when the content cannot fit (extreme zoom or very short
    viewport) the hero returns to normal flow. JS adds .hx-flow after measuring. */
 .hx.hx-flow{position:relative;height:auto;min-height:0}
@@ -574,10 +574,12 @@ a.service-row:hover .service-emblem{background:var(--cobalt);color:#fff}
 
 /* Closing call (green) ---------------------------------------------------- */
 .contact-band{padding:clamp(56px,7vw,96px) 0}
-.contact-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:40px;overflow:hidden;padding:clamp(36px,5vw,72px);border-radius:var(--radius-xl);background:linear-gradient(130deg,#0b7a63 0%,var(--green-700) 48%,var(--navy) 100%);color:#eef2ff}
-.contact-inner::after{content:'';position:absolute;right:-60px;bottom:-140px;width:300px;height:360px;border:2px solid rgb(49 216 191 / .55);border-radius:999px 999px 0 0;pointer-events:none}
+.contact-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:40px;overflow:hidden;padding:clamp(36px,5vw,72px);border-radius:var(--radius-xl);background:linear-gradient(105deg,var(--green-700) 0%,#0b7a63 46%,#1fbfa6 82%,#31d8bf 100%);color:#eef2ff}
+.contact-inner::after{content:'';position:absolute;right:-60px;bottom:-140px;width:300px;height:360px;border:2px solid rgb(255 255 255 / .45);border-radius:999px 999px 0 0;pointer-events:none}
 .contact-inner>*{position:relative;z-index:1}
-.contact-inner>div{max-width:720px}
+/* Genilton (17/10): green → the logo's aqua (#31d8bf). White text stays on the dark half
+   (≥ 5:1); the aqua end only carries the white button. */
+.contact-inner>div{max-width:min(600px,52%)}
 .contact-inner .eyebrow{--accent:#fff}
 .contact-inner h2{margin-bottom:16px;color:#fff;font-size:clamp(28px,3vw,42px)}
 .contact-inner p{margin:0;color:#eef2ff}
@@ -587,12 +589,12 @@ a.service-row:hover .service-emblem{background:var(--cobalt);color:#fff}
 
 /* Interior hero: navy with the page's own photograph integrated ------------- */
 .page-hero{position:relative;display:flex;align-items:center;min-height:min(640px,86svh);overflow:hidden;padding:calc(var(--header-space) + clamp(28px,4vw,56px)) 0 clamp(56px,7vw,96px);background:radial-gradient(50% 80% at 0% 100%,rgb(49 216 191 / .12),transparent 60%),linear-gradient(160deg,#1a2c62 0%,var(--navy-900) 58%,var(--navy-950) 100%);color:var(--on-dark)}
-.ph-contact{background:radial-gradient(50% 80% at 0% 100%,rgb(49 216 191 / .18),transparent 60%),linear-gradient(160deg,var(--forest-700) 0%,var(--forest) 70%,#08302a 100%)}
+.ph-contact,.page-v5-11 .page-hero{background:radial-gradient(50% 80% at 0% 100%,rgb(49 216 191 / .18),transparent 60%),linear-gradient(160deg,var(--forest-700) 0%,var(--forest) 70%,#08302a 100%)}
 .page-hero :focus-visible{outline-color:var(--teal)}
 .ph-media{position:absolute;top:calc(var(--header-space) - 6px);right:0;bottom:0;width:54%;margin:0;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 45%),linear-gradient(transparent 0%,#000 14%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0%,#000 45%),linear-gradient(transparent 0%,#000 14%);mask-composite:intersect}
 .ph-media img{width:100%;height:100%;object-fit:cover;object-position:var(--ph-focal,50% 45%)}
 .ph-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgb(13 24 56 / .55),transparent 40%)}
-.ph-contact .ph-media::after{background:linear-gradient(to top,rgb(8 48 42 / .55),transparent 40%)}
+.ph-contact .ph-media::after,.page-v5-11 .ph-media::after{background:linear-gradient(to top,rgb(8 48 42 / .55),transparent 40%)}
 .ph-inner{position:relative;z-index:1}
 .breadcrumbs{display:flex;flex-wrap:wrap;align-items:center;gap:0 10px;margin-bottom:clamp(16px,2.4vw,28px);font-size:14px;color:#b9c4df}
 .breadcrumbs a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:#fff;text-decoration:underline;text-decoration-color:rgb(255 255 255 / .35);text-underline-offset:4px}
@@ -689,6 +691,21 @@ a.service-row:hover .service-emblem{background:var(--cobalt);color:#fff}
 .footer-columns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding:40px 0}
 .footer-label{display:block;margin-bottom:12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff}
 .footer-columns a{display:flex;align-items:center;min-height:44px;color:var(--on-dark);overflow-wrap:anywhere;transition:color .2s}
+/* Genilton (17/10): icons on every contact line and on the address. */
+.footer-columns a:has(.footer-ico){gap:10px}
+.footer-ico{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:8px;background:rgb(255 255 255 / .07);color:var(--teal)}
+.footer-ico svg{width:15px;height:15px}
+.footer-address{display:flex;align-items:flex-start;gap:10px}
+.footer-columns a:has(.footer-ico) span{overflow-wrap:normal}
+/* Room for the floating WhatsApp button at the very end of the page. */
+.footer-bottom{padding-right:76px}
+.footer-address .footer-ico{margin-top:2px}
+/* Floating WhatsApp button on every page (above content, under the open menu). */
+.wa-fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:90;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 10px 24px -8px rgb(13 24 56 / .45),0 2px 6px rgb(13 24 56 / .2);transition:transform .25s var(--ease),box-shadow .25s}
+.wa-fab svg{width:30px;height:30px}
+.wa-fab:hover{transform:translateY(-2px) scale(1.04);color:#fff;box-shadow:0 14px 30px -8px rgb(13 24 56 / .5)}
+.wa-fab:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.menu-open-page .wa-fab,body:has(.site-header.menu-open) .wa-fab{opacity:0;pointer-events:none}
 .footer-columns a:hover,.footer-bottom a:hover{color:var(--teal)}
 .footer-columns p{margin:10px 0 0;line-height:1.6}
 .footer-contact-phones,.footer-social{display:flex;flex-wrap:wrap;gap:0 20px}
@@ -747,7 +764,8 @@ a.service-row:hover .service-emblem{background:var(--cobalt);color:#fff}
   .article-layout{grid-template-columns:1fr}
   .page-aside{position:static;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start}
   .contact-grid{grid-template-columns:1fr}
-  .contact-inner{flex-direction:column;align-items:flex-start;gap:28px}
+  .contact-inner{flex-direction:column;align-items:flex-start;gap:28px;background:linear-gradient(180deg,var(--green-700) 0%,#0b7a63 58%,#1fbfa6 88%,#31d8bf 100%)}
+  .contact-inner>div{max-width:none}
   .footer-top{flex-wrap:wrap;gap:20px 32px}
   .footer-top>.text-link{margin-left:0}
   .footer-columns{grid-template-columns:repeat(2,minmax(0,1fr))}
